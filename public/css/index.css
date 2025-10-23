@@ -1,0 +1,97 @@
+/* Card Styling */
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem !important;
+}
+
+.card-img-top {
+    border-radius: .8rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text {
+    font-weight: 400 !important;
+}
+
+/* Card Effect */
+
+.card-img-overlay {
+    opacity: 0 !important;
+}
+
+.card-img-overlay:hover {
+    opacity: .2 !important;
+    background-color: #fff !important;
+}
+
+.listing-link{
+    text-decoration: none !important;
+}
+
+/* Categories */
+
+#filters {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+
+.filter {
+text-align: center;
+margin-right: 1.5rem;
+opacity: 0.6;
+}
+
+.filter:hover {
+opacity: 1;
+cursor: pointer;
+}
+
+.filter p {
+font-size: .7rem;
+}
+
+/* Tax toggler */
+
+.taxInfo {
+display: none;
+}
+
+.form-check-input, .taxSwitch, 
+.totalTax {
+cursor: pointer;
+}
+
+.taxSwitch {
+border: 1px solid black;
+height: 3rem;
+border-radius: 1rem;
+width: 45vh;
+text-align: center;
+align-content: center;
+margin-bottom: 2rem;
+}  
+
+.form-check-input {
+margin-right: -.8rem !important;
+}
+
+@media screen and (max-width: 272px) {
+    .taxSwitch {
+    border: 1px solid black;
+    height: 2rem;
+    border-radius: 1rem;
+    width: 25vh;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 2rem;
+    font-size: 0.6rem;
+    }  
+}

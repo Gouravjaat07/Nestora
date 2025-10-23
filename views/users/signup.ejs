@@ -1,0 +1,25 @@
+<% layout("./layouts/boilerplate") %>
+<div class="row">
+    <div class="col-6 offset-3 mt-3">
+        <h3 class="mb-3"><b>Nestora</b> - Stay anywhere, feel at home.</h3>
+        <form method="POST" action="/signup" class="needs-validation mb-5" novalidate >
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" value="" name="username" class="form-control" required>
+                <div class="valid-feedback">Looks Good !</div>
+                <div class="invalid-feedback">Username should not be empty</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" value="" name="email" class="form-control" required>
+                <div class="invalid-feedback">Email should be valid</div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Create new Password</label>
+                <input type="password" value="" name="password" class="form-control" required>
+                <div class="invalid-feedback">Password should not be empty</div>
+            </div>
+            <button class="btn btn-success">SignUp</button>
+        </form>
+    </div>
+</div>   

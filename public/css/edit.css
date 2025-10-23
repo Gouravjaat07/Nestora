@@ -1,0 +1,25 @@
+/* Edit listing */
+.edit-btn {
+    border: none !important;
+    background-color: #fe424d !important;
+}
+
+.warning {
+    color: red !important;
+}
+
+@media screen and (min-width: 240px) and (max-width: 767px) {
+    .edit-btn {
+        height: 40px !important;
+        width: 60px !important;
+    }
+}
+
+@media screen and (max-width: 239px) {
+    .edit-btn {
+        font-size: .6rem !important;
+        height: 20px !important;
+        width: 40px !important;
+    }
+}
+

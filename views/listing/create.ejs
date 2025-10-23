@@ -1,0 +1,51 @@
+<% layout("./layouts/boilerplate") %>
+<br>
+<h3 class="text-center">Create New Listing</h3>
+<br><br>
+<div class="row offset-3">
+    <div class="col-8 ">
+        <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div class="mb-3 ">
+                <label class="form-label" for="title">Title</label>
+                <input type="text" placeholder="Title" name="listing[title]" class="form-control" required>
+                <div class="invalid-feedback">Title should be Valid</div>
+            </div>
+            <div class="mb-3">
+                <lable for="description" class="form-label">Description</lable>
+                <textarea type="text" name="listing[description]" class="form-control" rows="3" placeholder="Have a nice day" required></textarea>
+                <div class="invalid-feedback">Please enter a short description</div>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Uploda Image</label>
+                <input type="file" name="listing[image][url]" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <input placeholder="eg.,Rooms" name="listing[category]" id="category" class="form-control" required>
+                <p class="warning">Note: Please ensure that you select a category only from the list displayed on the homepage. Choosing a different category may result in the category-wise filter not functioning correctly for your Nest.</p>
+                <div class="invalid-feedback">Categories Should be Valid</div>
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input placeholder="1600" name="listing[price]" class="form-control" required>
+                <div class="invalid-feedback">Price Should be Valid</div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" placeholder="India" name="listing[country]" class="form-control" required>
+                    <div class="invalid-feedback">Country name should be Valid</div>
+                </div>
+                <div class="mb-3 col-md-8">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" placeholder="Jaipur, Rajasthan" name="listing[location]" class="form-control" required>
+                    <div class="invalid-feedback">Enter a valid Location</div>
+                </div>
+            </div>
+            <br>
+            <button class="btn btn-dark add-btn">Add</button>
+        </form>
+        <br><br>
+    </div>
+</div>

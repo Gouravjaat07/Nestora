@@ -1,0 +1,79 @@
+<% layout("./layouts/boilerplate") %>
+<script>
+  const listings = <%- JSON.stringify(allListing) %>;
+</script>
+<br>
+<%= success %>
+
+<div id="filters">
+  <div class="filter mb-3" id="Rooms">
+    <div><i class="fa-solid fa-bed"></i></div>
+    <p>Rooms</p>
+  </div>
+  <div class="filter mb-3">
+    <div><i class="fa-solid fa-mountain-city"></i></div>
+    <p>Iconic cities</p>
+  </div>
+  <div class="filter mb-3">
+    <div><i class="fa-solid fa-fire"></i></div>
+    <p>Trending</p>
+  </div>
+  <div class="filter mb-3">
+    <div><i class="fa-solid fa-water-ladder"></i></div>
+    <p>Amazing pools</p>
+  </div>
+  <div class="filter mb-3">
+    <div><i class="fa-solid fa-umbrella-beach"></i></div>
+    <p>Beach</p>
+  </div>
+  <div class="filter mb-3">
+    <div><i class="fa-regular fa-house"></i></div>
+    <p>Cabins</p>
+  </div>
+  <div class="filter mb-3" id="Arctic">
+    <div><i class="fa-solid fa-snowflake"></i></div>
+    <p>Arctic</p>
+  </div>
+  <div class="filter mb-3">
+    <div><i class="fa-solid fa-landmark"></i></div>
+    <p>Historical homes</p>
+  </div>
+  <div class="filter mb-3">
+    <div><i class="fa-solid fa-tree"></i></div>
+    <p>Tree houses</p>
+  </div>
+  <div class="filter mb-3">
+    <div><i class="fa-solid fa-house-signal"></i></div>
+    <p>Countryside</p>
+  </div>
+  <div class="filter mb-3">
+    <div><i class="fa-solid fa-igloo"></i></div>
+    <p>Domes</p>
+  </div>
+  <div class="form-check-reverse form-switch taxSwitch">
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+  <label class="form-check-label totalTax" for="switchCheckDefault">Display total with taxes</label>
+</div>
+</div>
+<div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-xs-1" id="allListings">
+  <% for(let listing of allListing) { %>
+  <a href="/listings/<%= listing._id %>" class="listing-link">
+  <div class="card listing-card hidden">
+    <img src="<%= listing.image.url %>" class="card-img-top" alt="Listing-Image" style="height: 20rem;">
+    <div class="card-img-overlay"></div>
+    <div class="card-body">
+      <p class="card-text"><b><%= listing.title %></b>
+      <br>
+      <% if (listing.price) { %>
+      ₹<%= listing.price.toLocaleString("en-IN") %>/ Night
+      <span class="taxInfo">+ 18% GST</span>
+      <% } else { %>
+      Price not available
+      <% } %>
+    </div>
+  </div>
+  </a>
+<% } %>
+</div>
+
+<script src="/js/index.js"></script>
