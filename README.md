@@ -98,8 +98,8 @@ You can test API routes using Hoppscotch or Postman.
 
 👨‍💻 Author
 
-Gourav Jaat
-🔗 GitHub | LinkedIn
+Gourav
+🔗 GitHub</a> | LinkedIn
 
 📜 License
 
