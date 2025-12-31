@@ -90,7 +90,7 @@ SECRET=your_session_secret
 node app.js
 
 App will run on:
-👉 http://localhost:8080
+👉 http://localhost:8080/listings
 
 🧾 API Testing
 
