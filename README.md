@@ -92,6 +92,9 @@ node app.js
 App will run on:
 👉 http://localhost:8080/listings
 
+Deploy Application link:
+👉 https://nestora-0v4l.onrender.com/listings
+
 🧾 API Testing
 
 You can test API routes using Hoppscotch or Postman.
